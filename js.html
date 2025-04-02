@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript is working in console.</h1> 
+    <script>
+       //Array Method
+        const arr=["krutika","senorita","jessica","meghna"];
+        arr.push("krutik","ganesh");
+        arr.pop();
+        arr.shift(1);
+        arr.unshift("Krutika","ganesh");
+        console.log(arr);
+
+        const arr1=["apple","cherry","mango","orange"];
+        const  arr2=["pineapple","pear","watermelon"];
+        const result=arr1.concat(arr2);
+        console.log(result);
+
+        const arr3=["Ironman","Spiderman","Thor","Hulk","Blackwidow","Antman"];
+        arr3.splice("Ironman","Spiderman","Aquaman","Joker");
+        console.log(arr3);
+        const sliced = arr3.slice (0,7);
+        console.log(sliced);
+        console.log(arr3.indexOf("Spiderman")); 
+        console.log(arr3.lastIndexOf("Aquaman"));
+        console.log(arr3.includes("Thor"));
+        arr3.reverse();
+        console.log(arr3);
+        console.log(arr3.join('-'));
+
+        // Object Methods
+        const obj={Krutika:1, Senorita:2};
+        console.log(Object.keys(obj));
+        // object value()
+        console.log(Object.values(obj));
+        // object enteries()
+        console.log(Object.entries(obj));
+        // object assign
+        const obj1={jessica:3};
+        const obj2={meghna:4};
+        Object.assign(obj1,obj2);
+        console.log(obj1);
+        // object freeze()
+        const friend={ganesh:1};
+        Object.freeze(friend);
+        friend.krutik=2;
+        console.log(friend);
+        // object seal
+        const cartoon={Ben10:1};
+        Object.seal(cartoon);
+        cartoon.pokemon=2;
+        cartoon.powerranger=3;
+        console.log(cartoon);
+        // Console method
+        // console table
+        const teacher=[{name:"manisha",age:43},{name:"jyoti",age:28}];
+        console.table(teacher);
+        // new
+        const age=35;
+        console.assert(age >=40,"X age must be 40 or older");
+        console.log(age);
+        // conole group 
+        console.group("Group 1");
+        console.log("hello 1");
+        console.log("Anime 2");
+        console.groupEnd();
+        console.groupCollapsed("Collapsed Group");
+        console.log("Hidden Message 1");
+        console.log("Hidden Message 2");
+        console.groupEnd();
+        // count
+        console.count("krutika");
+        console.count("krutika");
+        console.count("Another krutika");
+        console.count("krutika");
+        // time end
+        console.time("Timer");
+        for(let i=0;i<1000000;i++){}
+        console.timeEnd("Timer"); 
+        // console trace
+        function first(){
+            second();
+        }
+        function second(){
+            console.trace("stack trace");
+        }
+        first();
+        console.error("X This is an error");
+        console.warn("This is warning");
+
+       
+
+    </script>
+</body>
+</html>
